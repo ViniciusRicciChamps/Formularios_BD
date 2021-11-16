@@ -1,0 +1,81 @@
+
+
+body{
+
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.box{
+    background-color: #182848;
+    width: 450px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px 20px;
+    margin-top: 5vh; /* medida proporcional a tela do usuario*/
+    border-radius: 15px;
+    color: white;
+  
+}
+
+fieldset{
+    border: 3px solid dodgerblue;
+}
+legend{
+    text-align: center;
+    border: 3px solid dodgerblue;
+    padding: 10px;
+    color: white;
+    background-color: dodgerblue;
+    border-radius: 10px;
+}
+.inputBox{
+    position: relative;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.inputUser{
+  
+    background: none;
+    border: none;
+    border-bottom: 1px solid white;
+    outline: none;
+    color: white;
+    font-size: 12px; 
+    width: 100%;
+    letter-spacing: 2px;
+}
+
+.labelinput{
+   
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    pointer-events: none;
+    transition: .5s;
+}
+
+
+.inputUser:focus ~ .labelinput,
+.inputUser:valid ~ .labelinput{/* (~) EXECUTA UMA AÇÃO*/
+    color: dodgerblue;
+    font-size: 12px;
+    top: -15px;
+
+}
+ 
